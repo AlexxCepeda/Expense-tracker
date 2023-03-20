@@ -1,3 +1,4 @@
+import React from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from './components/NewExpense/NewExpense';
 function App() {
@@ -11,14 +12,12 @@ function App() {
       id: 3, title: 'Screws and nuts', amount: 121.32, date: new Date(2022, 8, 16)
     }
   ];
-
   const addExpenseHandler = expense => {
     console.log("In App.js");
     console.log(expense);
     expenses.push(expense);
     console.log("expenses ", expenses);
   }
-
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
